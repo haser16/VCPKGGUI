@@ -1,0 +1,10 @@
+﻿  MainUserControl.cpp
+  PackagesUserControl.cpp
+  pch.cpp
+  SettingsUserControl.cpp
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generating Code...
+  MainUserControl.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  UsersControls.vcxproj -> E:\Cpp\VCPKGGUI\x64\Debug\UsersControls.dll
+  "pwsh.exe" не является внутренней или внешней
+  командой, исполняемой программой или пакетным файлом.

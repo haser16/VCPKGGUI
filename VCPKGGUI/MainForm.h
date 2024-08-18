@@ -31,6 +31,12 @@ private:
 private:
     UsersControls::PackagesUserControl ^ packagesUserControl1;
 
+private:
+    UsersControls::SettingsUserControl ^ settingsUserControl1;
+
+private:
+
+
 protected:
 protected:
 private:
@@ -92,16 +98,12 @@ private:
 
     void InitializeComponent(void)
     {
-        this->mainUserControl1 = (gcnew UsersControls::MainUserControl());
+        System::ComponentModel::ComponentResourceManager ^ resources =
+            (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
         this->packagesUserControl1 = (gcnew UsersControls::PackagesUserControl());
+        this->mainUserControl1 = (gcnew UsersControls::MainUserControl());
+        this->settingsUserControl1 = (gcnew UsersControls::SettingsUserControl());
         this->SuspendLayout();
-        //
-        // mainUserControl1
-        //
-        this->mainUserControl1->Location = System::Drawing::Point(-6, -15);
-        this->mainUserControl1->Name = L"mainUserControl1";
-        this->mainUserControl1->Size = System::Drawing::Size(704, 584);
-        this->mainUserControl1->TabIndex = 0;
         //
         // packagesUserControl1
         //
@@ -112,6 +114,22 @@ private:
         this->packagesUserControl1->Size = System::Drawing::Size(300, 584);
         this->packagesUserControl1->TabIndex = 1;
         //
+        // mainUserControl1
+        //
+        this->mainUserControl1->Location = System::Drawing::Point(-6, -15);
+        this->mainUserControl1->Name = L"mainUserControl1";
+        this->mainUserControl1->Size = System::Drawing::Size(704, 584);
+        this->mainUserControl1->TabIndex = 0;
+        //
+        // settingsUserControl1
+        //
+        this->settingsUserControl1->BackgroundImage =
+            (cli::safe_cast<System::Drawing::Image ^>(resources->GetObject(L"settingsUserControl1.BackgroundImage")));
+        this->settingsUserControl1->Location = System::Drawing::Point(-6, -15);
+        this->settingsUserControl1->Name = L"settingsUserControl1";
+        this->settingsUserControl1->Size = System::Drawing::Size(700, 584);
+        this->settingsUserControl1->TabIndex = 2;
+        //
         // MainForm
         //
         this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -119,6 +137,7 @@ private:
         this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(89)),
             static_cast<System::Int32>(static_cast<System::Byte>(89)), static_cast<System::Int32>(static_cast<System::Byte>(89)));
         this->ClientSize = System::Drawing::Size(984, 561);
+        this->Controls->Add(this->settingsUserControl1);
         this->Controls->Add(this->packagesUserControl1);
         this->Controls->Add(this->mainUserControl1);
         this->ForeColor = System::Drawing::Color::White;

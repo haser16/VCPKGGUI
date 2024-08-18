@@ -156,6 +156,9 @@
     <EmbeddedResource Include="PackagesUserControl.resx">
       <DependentUpon>PackagesUserControl.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SettingsUserControl.resx">
+      <DependentUpon>SettingsUserControl.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

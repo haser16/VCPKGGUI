@@ -2,3 +2,4 @@ E:\Cpp\VCPKGGUI\UsersControls\x64\Debug\UsersControls.vcxproj.AssemblyReference.
 E:\Cpp\VCPKGGUI\UsersControls\x64\Debug\UsersControls.MainUserControl.resources
 E:\Cpp\VCPKGGUI\UsersControls\x64\Debug\UsersControls.PackagesUserControl.resources
 E:\Cpp\VCPKGGUI\UsersControls\x64\Debug\UsersControls.vcxproj.GenerateResource.cache
+E:\Cpp\VCPKGGUI\UsersControls\x64\Debug\UsersControls.SettingsUserControl.resources

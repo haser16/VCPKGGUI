@@ -180,6 +180,7 @@ namespace UsersControls {
             this->InstallButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
             this->InstallButton->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 15.75F, System::Drawing::FontStyle::Bold,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+            this->InstallButton->ForeColor = System::Drawing::Color::White;
             this->InstallButton->Location = System::Drawing::Point(77, 485);
             this->InstallButton->Name = L"InstallButton";
             this->InstallButton->Size = System::Drawing::Size(235, 53);
@@ -193,6 +194,7 @@ namespace UsersControls {
             this->label2->BackColor = System::Drawing::Color::Transparent;
             this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 9, System::Drawing::FontStyle::Bold,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+            this->label2->ForeColor = System::Drawing::Color::White;
             this->label2->Location = System::Drawing::Point(58, 212);
             this->label2->Name = L"label2";
             this->label2->Size = System::Drawing::Size(91, 17);
@@ -216,6 +218,7 @@ namespace UsersControls {
             this->panel2->BackColor = System::Drawing::Color::DimGray;
             this->panel2->Controls->Add(this->TextBoxPackage);
             this->panel2->Controls->Add(this->TextPackageName);
+            this->panel2->ForeColor = System::Drawing::Color::White;
             this->panel2->Location = System::Drawing::Point(61, 162);
             this->panel2->Name = L"panel2";
             this->panel2->Size = System::Drawing::Size(439, 47);
@@ -249,6 +252,7 @@ namespace UsersControls {
             this->label1->BackColor = System::Drawing::Color::Transparent;
             this->label1->Font = (gcnew System::Drawing::Font(
                 L"Gadugi", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->label1->ForeColor = System::Drawing::Color::White;
             this->label1->Location = System::Drawing::Point(71, 43);
             this->label1->Name = L"label1";
             this->label1->Size = System::Drawing::Size(248, 32);

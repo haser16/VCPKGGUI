@@ -1,12 +1,5 @@
 #pragma once
 
-using namespace System;
-using namespace System::ComponentModel;
-using namespace System::Collections;
-using namespace System::Windows::Forms;
-using namespace System::Data;
-using namespace System::Drawing;
-
 
 namespace UsersControls {
 
@@ -43,7 +36,10 @@ namespace UsersControls {
         System::Windows::Forms::Label ^ label1;
 
     private:
-        System::Windows::Forms::Button ^ button1;
+
+
+    private:
+
 
     private:
         System::Windows::Forms::PictureBox ^ pictureBox1;
@@ -61,7 +57,10 @@ namespace UsersControls {
         System::Windows::Forms::Label ^ label2;
 
     private:
-        System::Windows::Forms::Button ^ InstallButton;
+        System::Windows::Forms::Button ^ ConfirmButton;
+
+    private:
+
 
     private:
         System::Windows::Forms::Button ^ ButtonShowExplorer;
@@ -87,14 +86,13 @@ namespace UsersControls {
             System::ComponentModel::ComponentResourceManager ^ resources =
                 (gcnew System::ComponentModel::ComponentResourceManager(SettingsUserControl::typeid));
             this->label1 = (gcnew System::Windows::Forms::Label());
-            this->button1 = (gcnew System::Windows::Forms::Button());
             this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
             this->panel2 = (gcnew System::Windows::Forms::Panel());
             this->ButtonShowExplorer = (gcnew System::Windows::Forms::Button());
             this->TextBoxPackage = (gcnew System::Windows::Forms::TextBox());
             this->TextPackageName = (gcnew System::Windows::Forms::TextBox());
             this->label2 = (gcnew System::Windows::Forms::Label());
-            this->InstallButton = (gcnew System::Windows::Forms::Button());
+            this->ConfirmButton = (gcnew System::Windows::Forms::Button());
             (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox1))->BeginInit();
             this->panel2->SuspendLayout();
             this->SuspendLayout();
@@ -106,38 +104,17 @@ namespace UsersControls {
             this->label1->Font = (gcnew System::Drawing::Font(
                 L"Gadugi", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->label1->ForeColor = System::Drawing::Color::White;
-            this->label1->Location = System::Drawing::Point(62, 23);
+            this->label1->Location = System::Drawing::Point(88, 42);
             this->label1->Name = L"label1";
             this->label1->Size = System::Drawing::Size(119, 32);
             this->label1->TabIndex = 6;
             this->label1->Text = L"Settings";
             //
-            // button1
-            //
-            this->button1->BackColor = System::Drawing::Color::Transparent;
-            this->button1->FlatAppearance->BorderColor =
-                System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(156)),
-                    static_cast<System::Int32>(static_cast<System::Byte>(91)), static_cast<System::Int32>(static_cast<System::Byte>(51)));
-            this->button1->FlatAppearance->MouseDownBackColor =
-                System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(180)),
-                    static_cast<System::Int32>(static_cast<System::Byte>(91)), static_cast<System::Int32>(static_cast<System::Byte>(51)));
-            this->button1->FlatAppearance->MouseOverBackColor =
-                System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(170)),
-                    static_cast<System::Int32>(static_cast<System::Byte>(91)), static_cast<System::Int32>(static_cast<System::Byte>(51)));
-            this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->button1->ForeColor = System::Drawing::Color::DimGray;
-            this->button1->Image = (cli::safe_cast<System::Drawing::Image ^>(resources->GetObject(L"button1.Image")));
-            this->button1->Location = System::Drawing::Point(641, 14);
-            this->button1->Name = L"button1";
-            this->button1->Size = System::Drawing::Size(43, 41);
-            this->button1->TabIndex = 7;
-            this->button1->UseVisualStyleBackColor = false;
-            //
             // pictureBox1
             //
             this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
             this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image ^>(resources->GetObject(L"pictureBox1.Image")));
-            this->pictureBox1->Location = System::Drawing::Point(20, 20);
+            this->pictureBox1->Location = System::Drawing::Point(46, 39);
             this->pictureBox1->Name = L"pictureBox1";
             this->pictureBox1->Size = System::Drawing::Size(36, 35);
             this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -151,7 +128,7 @@ namespace UsersControls {
             this->panel2->Controls->Add(this->TextBoxPackage);
             this->panel2->Controls->Add(this->TextPackageName);
             this->panel2->ForeColor = System::Drawing::Color::White;
-            this->panel2->Location = System::Drawing::Point(68, 256);
+            this->panel2->Location = System::Drawing::Point(59, 164);
             this->panel2->Name = L"panel2";
             this->panel2->Size = System::Drawing::Size(439, 47);
             this->panel2->TabIndex = 9;
@@ -182,7 +159,7 @@ namespace UsersControls {
             this->TextBoxPackage->BorderStyle = System::Windows::Forms::BorderStyle::None;
             this->TextBoxPackage->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 14));
             this->TextBoxPackage->ForeColor = System::Drawing::Color::White;
-            this->TextBoxPackage->Location = System::Drawing::Point(16, 13);
+            this->TextBoxPackage->Location = System::Drawing::Point(16, 10);
             this->TextBoxPackage->Name = L"TextBoxPackage";
             this->TextBoxPackage->Size = System::Drawing::Size(408, 25);
             this->TextBoxPackage->TabIndex = 0;
@@ -205,43 +182,44 @@ namespace UsersControls {
             this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 9, System::Drawing::FontStyle::Bold,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
             this->label2->ForeColor = System::Drawing::Color::White;
-            this->label2->Location = System::Drawing::Point(65, 306);
+            this->label2->Location = System::Drawing::Point(56, 214);
             this->label2->Name = L"label2";
             this->label2->Size = System::Drawing::Size(102, 17);
             this->label2->TabIndex = 2;
             this->label2->Text = L"Path To VCPKG";
             //
-            // InstallButton
+            // ConfirmButton
             //
-            this->InstallButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
+            this->ConfirmButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
                 static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
-            this->InstallButton->FlatAppearance->BorderColor =
+            this->ConfirmButton->FlatAppearance->BorderColor =
                 System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)),
                     static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(0)));
-            this->InstallButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->InstallButton->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 15.75F, System::Drawing::FontStyle::Bold,
+            this->ConfirmButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->ConfirmButton->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 15.75F, System::Drawing::FontStyle::Bold,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
-            this->InstallButton->ForeColor = System::Drawing::Color::White;
-            this->InstallButton->Location = System::Drawing::Point(68, 497);
-            this->InstallButton->Name = L"InstallButton";
-            this->InstallButton->Size = System::Drawing::Size(235, 53);
-            this->InstallButton->TabIndex = 10;
-            this->InstallButton->Text = L"Confirm";
-            this->InstallButton->UseVisualStyleBackColor = false;
+            this->ConfirmButton->ForeColor = System::Drawing::Color::White;
+            this->ConfirmButton->Location = System::Drawing::Point(59, 497);
+            this->ConfirmButton->Name = L"ConfirmButton";
+            this->ConfirmButton->Size = System::Drawing::Size(235, 53);
+            this->ConfirmButton->TabIndex = 10;
+            this->ConfirmButton->Text = L"Confirm";
+            this->ConfirmButton->UseVisualStyleBackColor = false;
+            this->ConfirmButton->Click += gcnew System::EventHandler(this, &SettingsUserControl::ConfirmButton_Click);
             //
             // SettingsUserControl
             //
             this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
             this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
             this->BackgroundImage = (cli::safe_cast<System::Drawing::Image ^>(resources->GetObject(L"$this.BackgroundImage")));
-            this->Controls->Add(this->InstallButton);
+            this->Controls->Add(this->ConfirmButton);
             this->Controls->Add(this->label2);
             this->Controls->Add(this->panel2);
             this->Controls->Add(this->pictureBox1);
-            this->Controls->Add(this->button1);
             this->Controls->Add(this->label1);
             this->Name = L"SettingsUserControl";
             this->Size = System::Drawing::Size(700, 584);
+            this->Load += gcnew System::EventHandler(this, &SettingsUserControl::SettingsUserControl_Load);
             (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox1))->EndInit();
             this->panel2->ResumeLayout(false);
             this->panel2->PerformLayout();
@@ -250,6 +228,10 @@ namespace UsersControls {
         }
 #pragma endregion
     private:
+        System::Void SettingsUserControl_Load(System::Object ^ sender, System::EventArgs ^ e);
         System::Void ButtonShowExplorer_Click(System::Object ^ sender, System::EventArgs ^ e);
+
+    private:
+        System::Void ConfirmButton_Click(System::Object ^ sender, System::EventArgs ^ e);
     };
     }

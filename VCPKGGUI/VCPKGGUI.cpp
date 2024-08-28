@@ -1,6 +1,7 @@
 #include "pch.h"
 
 using namespace System;
+using namespace System::IO;
 
 // int main(array<System::String ^> ^args)
 // {
@@ -8,14 +9,21 @@ using namespace System;
 // }
 
 #include "MainForm.h"
+#include "StartForm.h"
 
 using namespace System::Windows::Forms;
 
-[STAThread]
-int main()
+[STAThread] int main()
 {
     Application::EnableVisualStyles();
     Application::SetCompatibleTextRenderingDefault(false);
-    Application::Run(gcnew CppCLRWinFormsProject::MainForm());
+    Directory::CreateDirectory("Settings");
+    if (!File::Exists("Settings/pathtovcpkg.json"))
+    {
+        
+    }
+    Application::Run(gcnew VCPKGGUI::StartForm());
+    return 0;
+    Application::Run(gcnew VCPKGGUI::MainForm());
     return 0;
 }

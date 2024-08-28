@@ -2,6 +2,7 @@
 #include "MainUserControl.h"
 #include "string"
 #include "msclr/marshal_cppstd.h"
+#include "nlohmann/json.hpp"
 
 using namespace System;
 using namespace System::ComponentModel;
@@ -9,21 +10,7 @@ using namespace System::Collections;
 using namespace System::Windows::Forms;
 using namespace System::Data;
 using namespace System::Drawing;
-
-// std::string GetProjectDirectory();
-//
-// System::Void CppCLRWinFormsProject::Form1::Install_Click(System::Object^ sender, System::EventArgs^ e)
-//{
-//	std::string Command = "pushd " + msclr::interop::marshal_as<std::string>(TextPathToVCPKG->Text) + " & " + ".\\vcpkg install " +
-//msclr::interop::marshal_as<std::string>(TextBox_Package->Text); 	system(Command.c_str());
-// }
-
-// System::Void CppCLRWinFormsProject::Form1::ChoosePathButton_DoubleClick(System::Object^ sender, System::EventArgs^ e)
-//{
-//	FolderBrowserDialog^ Dialog = gcnew FolderBrowserDialog();
-//	Dialog->ShowDialog();
-//	TextPathToVCPKG->Text = Dialog->SelectedPath;
-// }
+using namespace System::IO;
 
 // std::string GetProjectDirectory()
 //{
@@ -45,6 +32,28 @@ System::Void UsersControls::MainUserControl::pictureBox1_Click(System::Object ^ 
 
 System::Void UsersControls::MainUserControl::InstallButton_Click(System::Object ^ sender, System::EventArgs ^ e)
 {
-    // std::string Command = "pushd " + msclr::interop::marshal_as<std::string>(TextPathToVCPKG->Text) + " & " + ".\\vcpkg install " +
-    // msclr::interop::marshal_as<std::string>(TextBoxPackage->Text); system(Command.c_str());
+    auto File = System::IO::File::OpenText("Settings/pathtovcpkg.json");
+    std::string VCPKG;
+
+    while (!File->EndOfStream)
+    {
+        System::String ^ Line = File->ReadLine();
+        nlohmann::json j = nlohmann::json::parse(msclr::interop::marshal_as<std::string>(Line));
+        VCPKG = j["path"];
+    }
+    File->Close();
+
+    std::string Command = "pushd " + VCPKG + " & " + ".\\vcpkg install " + msclr::interop::marshal_as<std::string>(TextBoxPackage->Text);
+    msclr::interop::marshal_as<std::string>(TextBoxPackage->Text);
+    int Exit = system(Command.c_str());
+    if (Exit > 0)
+    {
+        MessageBox::Show("Something wents wrong!");
+    }
+    else if (!Exit)
+    {
+        StreamWriter ^ writer = gcnew StreamWriter("Settings/Libs.txt", true);
+        writer->WriteLine(TextBoxPackage->Text);
+        writer->Close();
+    }
 }

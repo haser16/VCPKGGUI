@@ -24,7 +24,13 @@
     <ClInclude Include="PackagesUserControl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SettingsUserControl.h">
+    <ClInclude Include="JsonSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingsUserContol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StartUserControl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -41,6 +47,9 @@
     <ClCompile Include="SettingsUserControl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="StartUserControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -51,5 +60,10 @@
     <Image Include="app.ico">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SettingsUserContol.resx">
+      <Filter>Header Files</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

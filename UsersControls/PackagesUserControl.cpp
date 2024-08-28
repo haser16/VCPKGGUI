@@ -7,13 +7,17 @@ using namespace System::Collections;
 using namespace System::Windows::Forms;
 using namespace System::Data;
 using namespace System::Drawing;
-
+using namespace System::IO;
 
 System::Void UsersControls::PackagesUserControl::PackagesUserControl_Load(System::Object ^ sender, System::EventArgs ^ e)
 {
     int yOffset = 24;
+    if (!File::Exists("Settings/Libs.txt"))
+    {
+        File::Create("Settings/Libs.txt")->Close();
+    }
 
-    auto File = System::IO::File::OpenText("Libs.txt");
+    auto File = System::IO::File::OpenText("Settings/Libs.txt");
 
     while (!File->EndOfStream)
     {
@@ -34,4 +38,5 @@ System::Void UsersControls::PackagesUserControl::PackagesUserControl_Load(System
 
         yOffset += 30;
     }
+    File->Close();
 }

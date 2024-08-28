@@ -84,6 +84,9 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <SubSystem>NotSet</SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -96,6 +99,9 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <SubSystem>NotSet</SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -108,6 +114,9 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <SubSystem>NotSet</SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -120,9 +129,13 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <SubSystem>NotSet</SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="JsonSettings.h" />
     <ClInclude Include="MainUserControl.h">
       <FileType>CppControl</FileType>
     </ClInclude>
@@ -130,7 +143,17 @@
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="SettingsUserControl.h">
+    <ClInclude Include="SettingsUserContol.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="StartUserControl.h">
       <FileType>CppControl</FileType>
     </ClInclude>
   </ItemGroup>
@@ -139,6 +162,7 @@
     <ClCompile Include="PackagesUserControl.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="SettingsUserControl.cpp" />
+    <ClCompile Include="StartUserControl.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
@@ -160,8 +184,14 @@
     <EmbeddedResource Include="PackagesUserControl.resx">
       <DependentUpon>PackagesUserControl.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SettingsUserControl.resx">
-      <DependentUpon>SettingsUserControl.h</DependentUpon>
+    <EmbeddedResource Include="SettingsUserContol.resx">
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UsersControls.SettingsUserControl.resources</LogicalName>
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UsersControls.SettingsUserControl.resources</LogicalName>
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UsersControls.SettingsUserControl.resources</LogicalName>
+      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UsersControls.SettingsUserControl.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartUserControl.resx">
+      <DependentUpon>StartUserControl.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -8,7 +8,7 @@ using namespace System::Windows::Forms;
 using namespace System::Data;
 using namespace System::Drawing;
 
-System::Void CppCLRWinFormsProject::MainForm::SettingsButton_Click(System::Object ^ sender, System::EventArgs ^ e)
+System::Void VCPKGGUI::MainForm::SettingsButton_Click(System::Object ^ sender, System::EventArgs ^ e)
 {
     bool Settings = settingsUserControl1->Visible;
     if (!Settings)

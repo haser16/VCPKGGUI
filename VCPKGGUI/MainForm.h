@@ -1,6 +1,6 @@
 #pragma once
 
-namespace CppCLRWinFormsProject
+namespace VCPKGGUI
 {
 
 public
@@ -20,8 +20,21 @@ protected:
 
 public:
 
+
+private:
+
+
+public:
+private:
+
+
+private:
+    System::Windows::Forms::Button ^ SettingsButton;
+
+public:
     UsersControls::PackagesUserControl ^ packagesUserControl1;
 
+private:
 private:
     UsersControls::MainUserControl ^ mainUserControl1;
 
@@ -30,14 +43,7 @@ private:
     UsersControls::SettingsUserControl ^ settingsUserControl1;
 
 private:
-    System::Windows::Forms::Button ^ SettingsButton;
-
-private:
-
-
 public:
-
-
     System::ComponentModel::IContainer ^ components;
 
 #pragma region Windows Form Designer generated code
@@ -47,9 +53,9 @@ public:
         System::ComponentModel::ComponentResourceManager ^ resources =
             (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
         this->SettingsButton = (gcnew System::Windows::Forms::Button());
-        this->settingsUserControl1 = (gcnew UsersControls::SettingsUserControl());
-        this->mainUserControl1 = (gcnew UsersControls::MainUserControl());
         this->packagesUserControl1 = (gcnew UsersControls::PackagesUserControl());
+        this->mainUserControl1 = (gcnew UsersControls::MainUserControl());
+        this->settingsUserControl1 = (gcnew UsersControls::SettingsUserControl());
         this->SuspendLayout();
         //
         // SettingsButton
@@ -69,6 +75,22 @@ public:
         this->SettingsButton->UseVisualStyleBackColor = false;
         this->SettingsButton->Click += gcnew System::EventHandler(this, &MainForm::SettingsButton_Click);
         //
+        // packagesUserControl1
+        //
+        this->packagesUserControl1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(89)),
+            static_cast<System::Int32>(static_cast<System::Byte>(89)), static_cast<System::Int32>(static_cast<System::Byte>(89)));
+        this->packagesUserControl1->Location = System::Drawing::Point(704, -15);
+        this->packagesUserControl1->Name = L"packagesUserControl1";
+        this->packagesUserControl1->Size = System::Drawing::Size(300, 584);
+        this->packagesUserControl1->TabIndex = 1;
+        //
+        // mainUserControl1
+        //
+        this->mainUserControl1->Location = System::Drawing::Point(-6, -15);
+        this->mainUserControl1->Name = L"mainUserControl1";
+        this->mainUserControl1->Size = System::Drawing::Size(704, 584);
+        this->mainUserControl1->TabIndex = 2;
+        //
         // settingsUserControl1
         //
         this->settingsUserControl1->BackgroundImage =
@@ -78,22 +100,6 @@ public:
         this->settingsUserControl1->Size = System::Drawing::Size(700, 584);
         this->settingsUserControl1->TabIndex = 3;
         this->settingsUserControl1->Visible = false;
-        //
-        // mainUserControl1
-        //
-        this->mainUserControl1->Location = System::Drawing::Point(-6, -15);
-        this->mainUserControl1->Name = L"mainUserControl1";
-        this->mainUserControl1->Size = System::Drawing::Size(704, 584);
-        this->mainUserControl1->TabIndex = 2;
-        //
-        // packagesUserControl1
-        //
-        this->packagesUserControl1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(89)),
-            static_cast<System::Int32>(static_cast<System::Byte>(89)), static_cast<System::Int32>(static_cast<System::Byte>(89)));
-        this->packagesUserControl1->Location = System::Drawing::Point(704, -15);
-        this->packagesUserControl1->Name = L"packagesUserControl1";
-        this->packagesUserControl1->Size = System::Drawing::Size(300, 584);
-        this->packagesUserControl1->TabIndex = 1;
         //
         // MainForm
         //
@@ -110,6 +116,7 @@ public:
         this->MaximizeBox = false;
         this->MinimumSize = System::Drawing::Size(1000, 600);
         this->Name = L"MainForm";
+        this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
         this->Text = L"VCPKG GUI";
         this->ResumeLayout(false);
     }
@@ -118,7 +125,7 @@ public:
     private: System::Void ChoosePathButton_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {};
     private: System::Void ChoosePathButton_DoubleClick(System::Object^ sender, System::EventArgs^ e);*/
 
-    private:
-        System::Void SettingsButton_Click(System::Object ^ sender, System::EventArgs ^ e);
+private:
+    System::Void SettingsButton_Click(System::Object ^ sender, System::EventArgs ^ e);
 };
-}
+}  // namespace CppCLRWinFormsProject

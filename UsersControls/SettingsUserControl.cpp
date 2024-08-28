@@ -4,7 +4,6 @@
 #include "msclr/marshal_cppstd.h"
 #include "string"
 
-
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
@@ -15,10 +14,10 @@ using namespace System::IO;
 
 System::Void UsersControls::SettingsUserControl::SettingsUserControl_Load(System::Object ^ sender, System::EventArgs ^ e)
 {
-    System::String ^ Path = gcnew String("../Settings/pathtovcpkg.json");
+    System::String ^ Path = gcnew String("Settings/pathtovcpkg.json");
     if (File::Exists(Path))
     {
-        auto File = System::IO::File::OpenText("../Settings/pathtovcpkg.json");
+        auto File = System::IO::File::OpenText("Settings/pathtovcpkg.json");
 
         while (!File->EndOfStream)
         {
@@ -43,7 +42,7 @@ System::Void UsersControls::SettingsUserControl::ConfirmButton_Click(System::Obj
 {
     nlohmann::json j;
     j["path"] = msclr::interop::marshal_as<std::string>(TextBoxPackage->Text);
-    StreamWriter ^ writer = gcnew StreamWriter("../Settings/pathtovcpkg.json");
+    StreamWriter ^ writer = gcnew StreamWriter("Settings/pathtovcpkg.json");
     String ^ Path = gcnew String(j.dump().c_str());
     writer->WriteLine(Path);
     writer->Close();

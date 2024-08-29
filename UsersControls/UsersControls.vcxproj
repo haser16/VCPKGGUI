@@ -143,15 +143,8 @@
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="SettingsUserContol.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      </ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      </ExcludedFromBuild>
+    <ClInclude Include="SettingsUserControl.h">
+      <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="StartUserControl.h">
       <FileType>CppControl</FileType>
@@ -184,11 +177,8 @@
     <EmbeddedResource Include="PackagesUserControl.resx">
       <DependentUpon>PackagesUserControl.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SettingsUserContol.resx">
-      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UsersControls.SettingsUserControl.resources</LogicalName>
-      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UsersControls.SettingsUserControl.resources</LogicalName>
-      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UsersControls.SettingsUserControl.resources</LogicalName>
-      <LogicalName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UsersControls.SettingsUserControl.resources</LogicalName>
+    <EmbeddedResource Include="SettingsUserControl.resx">
+      <DependentUpon>SettingsUserControl.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartUserControl.resx">
       <DependentUpon>StartUserControl.h</DependentUpon>

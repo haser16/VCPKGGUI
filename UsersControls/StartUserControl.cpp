@@ -4,6 +4,8 @@
 #include <string>
 #include "fstream"
 #include "stdio.h"
+#include "nlohmann/json.hpp"
+#include "msclr/marshal_cppstd.h"
 
 using namespace System;
 using namespace System::ComponentModel;
@@ -14,6 +16,17 @@ using namespace System::Drawing;
 using namespace System::IO;
 using namespace System::Threading;
 
+std::string GetProjectDirectory()
+{
+    std::string filePath = __FILE__;
+
+    size_t lastSlashPos = filePath.find_last_of("/\\");
+
+    if (lastSlashPos != std::string::npos)
+    {
+        return filePath.substr(0, lastSlashPos).c_str();
+    }
+}
 
 System::Void UsersControls::StartUserControl::ThrInstallVcpkg(Object ^ data)
 {
@@ -29,7 +42,7 @@ System::Void UsersControls::StartUserControl::ThrInstallVcpkg(Object ^ data)
         system("vcpkg\\bootstrap-vcpkg.bat");
         std::string IntegrateInstall = "cd vcpkg & vcpkg integrate install > ../requirements.txt";
         system(IntegrateInstall.c_str());
-        
+
         std::ifstream Requirements("requirements.txt");
         std::ofstream CmakeFile("vcpkg/CMAKE.txt");
         char ch;
@@ -58,6 +71,13 @@ System::Void UsersControls::StartUserControl::ThrInstallVcpkg(Object ^ data)
         LoadingGif->Visible = false;
         WaitLabel->Text = "Success";
         WaitLabel->Location = System::Drawing::Point(330, 365);
+
+        nlohmann::json j;
+        j["path"] = GetProjectDirectory() + "\\vcpkg\\";
+        StreamWriter ^ writer = gcnew StreamWriter("Settings/pathtovcpkg.json");
+        String ^ Path = gcnew String(j.dump().c_str());
+        writer->WriteLine(Path);
+        writer->Close();
     }
 }
 
@@ -67,5 +87,4 @@ System::Void UsersControls::StartUserControl::ButtonInstallVcpkg_Click(System::O
     WaitLabel->Visible = true;
     Thread ^ t = gcnew Thread(gcnew ParameterizedThreadStart(this, &StartUserControl::ThrInstallVcpkg));
     t->Start();
-    
 }

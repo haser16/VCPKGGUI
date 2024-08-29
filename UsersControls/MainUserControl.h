@@ -136,7 +136,7 @@ private:
         this->InstallButton->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 15.75F, System::Drawing::FontStyle::Bold,
             System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
         this->InstallButton->ForeColor = System::Drawing::Color::White;
-        this->InstallButton->Location = System::Drawing::Point(75, 489);
+        this->InstallButton->Location = System::Drawing::Point(59, 497);
         this->InstallButton->Name = L"InstallButton";
         this->InstallButton->Size = System::Drawing::Size(235, 53);
         this->InstallButton->TabIndex = 3;
@@ -175,7 +175,7 @@ private:
         this->panel2->Controls->Add(this->TextBoxPackage);
         this->panel2->Controls->Add(this->TextPackageName);
         this->panel2->ForeColor = System::Drawing::Color::White;
-        this->panel2->Location = System::Drawing::Point(61, 162);
+        this->panel2->Location = System::Drawing::Point(59, 164);
         this->panel2->Name = L"panel2";
         this->panel2->Size = System::Drawing::Size(439, 47);
         this->panel2->TabIndex = 1;

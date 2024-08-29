@@ -46,7 +46,7 @@ ref class StartUserControl : public System::Windows::Forms::UserControl
         System::Windows::Forms::Button ^ ButtonInstallVcpkg;
 
     private:
-        System::Windows::Forms::Button ^ ButtonContinue;
+
 
     private:
         System::Windows::Forms::PictureBox ^ LoadingGif;
@@ -103,7 +103,6 @@ ref class StartUserControl : public System::Windows::Forms::UserControl
                 (gcnew System::ComponentModel::ComponentResourceManager(StartUserControl::typeid));
             this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
             this->ButtonInstallVcpkg = (gcnew System::Windows::Forms::Button());
-            this->ButtonContinue = (gcnew System::Windows::Forms::Button());
             this->LoadingGif = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
             this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
@@ -141,21 +140,6 @@ ref class StartUserControl : public System::Windows::Forms::UserControl
             this->ButtonInstallVcpkg->Text = L"Install vcpkg";
             this->ButtonInstallVcpkg->UseVisualStyleBackColor = false;
             this->ButtonInstallVcpkg->Click += gcnew System::EventHandler(this, &StartUserControl::ButtonInstallVcpkg_Click);
-            //
-            // ButtonContinue
-            //
-            this->ButtonContinue->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)),
-                static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)));
-            this->ButtonContinue->FlatAppearance->BorderColor = System::Drawing::Color::OldLace;
-            this->ButtonContinue->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->ButtonContinue->Font = (gcnew System::Drawing::Font(L"Arial Rounded MT Bold", 15.75F));
-            this->ButtonContinue->ForeColor = System::Drawing::Color::White;
-            this->ButtonContinue->Location = System::Drawing::Point(553, 473);
-            this->ButtonContinue->Name = L"ButtonContinue";
-            this->ButtonContinue->Size = System::Drawing::Size(186, 45);
-            this->ButtonContinue->TabIndex = 4;
-            this->ButtonContinue->Text = L"Continue";
-            this->ButtonContinue->UseVisualStyleBackColor = false;
             //
             // LoadingGif
             //
@@ -233,7 +217,6 @@ ref class StartUserControl : public System::Windows::Forms::UserControl
             this->Controls->Add(this->pictureBox4);
             this->Controls->Add(this->pictureBox2);
             this->Controls->Add(this->LoadingGif);
-            this->Controls->Add(this->ButtonContinue);
             this->Controls->Add(this->ButtonInstallVcpkg);
             this->Controls->Add(this->pictureBox1);
             this->MaximumSize = System::Drawing::Size(799, 539);

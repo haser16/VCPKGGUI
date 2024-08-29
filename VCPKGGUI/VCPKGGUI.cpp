@@ -20,10 +20,9 @@ using namespace System::Windows::Forms;
     Directory::CreateDirectory("Settings");
     if (!File::Exists("Settings/pathtovcpkg.json"))
     {
-        
+        Application::Run(gcnew VCPKGGUI::StartForm());
+        return 0;
     }
-    Application::Run(gcnew VCPKGGUI::StartForm());
-    return 0;
     Application::Run(gcnew VCPKGGUI::MainForm());
     return 0;
 }

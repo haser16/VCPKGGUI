@@ -64,7 +64,7 @@ namespace UsersControls {
             this->label4->Name = L"label4";
             this->label4->Size = System::Drawing::Size(251, 32);
             this->label4->TabIndex = 6;
-            this->label4->Text = L"Installed Packeges";
+            this->label4->Text = L"Installed Packages";
             //
             // ListOfLibs
             //

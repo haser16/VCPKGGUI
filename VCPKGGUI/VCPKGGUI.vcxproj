@@ -181,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.clang-format" />
+    <None Include="..\.gitignore" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

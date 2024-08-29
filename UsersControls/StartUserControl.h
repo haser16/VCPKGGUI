@@ -5,7 +5,8 @@ namespace UsersControls {
 	/// <summary>
 	/// Summary for StartUserControl
 	/// </summary>
-	public ref class StartUserControl : public System::Windows::Forms::UserControl
+public
+ref class StartUserControl : public System::Windows::Forms::UserControl
 	{
 	public:
 		StartUserControl(void)
@@ -250,6 +251,6 @@ namespace UsersControls {
 #pragma endregion
     private:
         System::Void ButtonInstallVcpkg_Click(System::Object ^ sender, System::EventArgs ^ e);
-        System::Void UsersControls::StartUserControl::ThrInstallVcpkg(Object ^ data);
+        System::Void ThrInstallVcpkg(Object ^ data);
     };
     }

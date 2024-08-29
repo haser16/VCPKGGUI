@@ -1,5 +1,25 @@
 ﻿  StartUserControl.cpp
-  MainUserControl.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  UsersControls.vcxproj -> E:\Cpp\VCPKGGUI\x64\Debug\UsersControls.dll
-  "pwsh.exe" не является внутренней или внешней
-  командой, исполняемой программой или пакетным файлом.
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(21,5): error C2653: 'UsersControls': is not a class or namespace name
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(21,37): error C2143: syntax error: missing ';' before '^'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(21,37): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(21,56): error C2238: unexpected token(s) preceding ';'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(45,15): error C2039: 'startUserControl1': is not a member of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(6,11): message : see declaration of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(45,42): error C2653: 'UsersControls': is not a class or namespace name
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(45,57): error C2061: syntax error: identifier 'StartUserControl'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(50,15): error C2039: 'startUserControl1': is not a member of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(6,11): message : see declaration of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(51,15): error C2039: 'startUserControl1': is not a member of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(6,11): message : see declaration of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(52,15): error C2039: 'startUserControl1': is not a member of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(6,11): message : see declaration of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(53,15): error C2039: 'startUserControl1': is not a member of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(6,11): message : see declaration of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(54,15): error C2039: 'startUserControl1': is not a member of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(6,11): message : see declaration of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(55,15): error C2039: 'startUserControl1': is not a member of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(6,11): message : see declaration of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(56,15): error C2039: 'startUserControl1': is not a member of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(6,11): message : see declaration of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(64,35): error C2039: 'startUserControl1': is not a member of 'VCPKGGUI::StartForm'
+E:\Cpp\VCPKGGUI\VCPKGGUI\StartForm.h(6,11): message : see declaration of 'VCPKGGUI::StartForm'

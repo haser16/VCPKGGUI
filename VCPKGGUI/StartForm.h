@@ -20,21 +20,10 @@ protected:
 private:
     UsersControls::StartUserControl ^ startUserControl1;
 
-private:
-
-
 protected:
 private:
 
 
-protected: 
-
-
-protected:
-private:
-
-
-private:
     System::ComponentModel::Container ^ components;
 
 #pragma region Windows Form Designer generated code
@@ -48,7 +37,7 @@ private:
         // startUserControl1
         //
         this->startUserControl1->BackColor = System::Drawing::Color::White;
-        this->startUserControl1->Location = System::Drawing::Point(-2, -37);
+        this->startUserControl1->Location = System::Drawing::Point(-6, -29);
         this->startUserControl1->MaximumSize = System::Drawing::Size(799, 539);
         this->startUserControl1->MinimumSize = System::Drawing::Size(799, 539);
         this->startUserControl1->Name = L"startUserControl1";

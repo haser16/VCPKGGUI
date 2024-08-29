@@ -1,0 +1,6 @@
+E:\Cpp\VCPKGGUI\UsersControls\x64\Debug\UsersControls.vcxproj.AssemblyReference.cache
+E:\Cpp\VCPKGGUI\UsersControls\x64\Debug\UsersControls.MainUserControl.resources
+E:\Cpp\VCPKGGUI\UsersControls\x64\Debug\UsersControls.PackagesUserControl.resources
+E:\Cpp\VCPKGGUI\UsersControls\x64\Debug\UsersControls.SettingsUserContol.resources
+E:\Cpp\VCPKGGUI\UsersControls\x64\Debug\UsersControls.StartUserControl.resources
+E:\Cpp\VCPKGGUI\UsersControls\x64\Debug\UsersControls.vcxproj.GenerateResource.cache

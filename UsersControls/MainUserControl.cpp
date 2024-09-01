@@ -24,14 +24,16 @@ using namespace System::IO;
 //	}
 // }
 
-System::Void UsersControls::MainUserControl::pictureBox1_Click(System::Object ^ sender, System::EventArgs ^ e)
+System::Void UsersControls::MainUserControl::pictureBox5_Click(System::Object ^ sender, System::EventArgs ^ e)
 {
     System::Diagnostics::Process ^ Proces = gcnew System::Diagnostics::Process();
     Proces->Start("https://vcpkg.io/en/packages");
 }
 
-System::Void UsersControls::MainUserControl::InstallButton_Click(System::Object ^ sender, System::EventArgs ^ e)
+System::Void UsersControls::MainUserControl::DownloadButton_Click(System::Object ^ sender, System::EventArgs ^ e) 
 {
+    DownloadButton->Visible = false;
+    pictureBox2->Visible = true;
     auto File = System::IO::File::OpenText("Settings/pathtovcpkg.json");
     std::string VCPKG;
 
@@ -43,11 +45,11 @@ System::Void UsersControls::MainUserControl::InstallButton_Click(System::Object 
     }
     File->Close();
 
-    std::string Command = "pushd " + VCPKG + " & " + ".\\vcpkg install " + msclr::interop::marshal_as<std::string>(TextBoxPackage->Text);
-    msclr::interop::marshal_as<std::string>(TextBoxPackage->Text);
-    int Exit = system(Command.c_str());
-    if (Exit > 0)
-    {
+    // std::string Command = "pushd " + VCPKG + " & " + ".\\vcpkg install " + msclr::interop::marshal_as<std::string>(TextBoxPackage->Text);
+    // msclr::interop::marshal_as<std::string>(TextBoxPackage->Text);
+    // int Exit = system(Command.c_str());
+    // if (Exit > 0)
+    /*{
         MessageBox::Show("Something wents wrong!");
     }
     else if (!Exit)
@@ -55,5 +57,5 @@ System::Void UsersControls::MainUserControl::InstallButton_Click(System::Object 
         StreamWriter ^ writer = gcnew StreamWriter("Settings/Libs.txt", true);
         writer->WriteLine(TextBoxPackage->Text);
         writer->Close();
-    }
+    }*/
 }

@@ -29,10 +29,13 @@ namespace UsersControls {
 		}
 
     private:
-        System::Windows::Forms::Label ^ label4;
+
 
     private:
         System::Windows::Forms::FlowLayoutPanel ^ ListOfLibs;
+
+    private:
+        System::Windows::Forms::PictureBox ^ pictureBox1;
 
     protected: 
 
@@ -49,22 +52,12 @@ namespace UsersControls {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-            this->label4 = (gcnew System::Windows::Forms::Label());
+            System::ComponentModel::ComponentResourceManager ^ resources =
+                (gcnew System::ComponentModel::ComponentResourceManager(PackagesUserControl::typeid));
             this->ListOfLibs = (gcnew System::Windows::Forms::FlowLayoutPanel());
+            this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox1))->BeginInit();
             this->SuspendLayout();
-            //
-            // label4
-            //
-            this->label4->AutoSize = true;
-            this->label4->BackColor = System::Drawing::Color::Transparent;
-            this->label4->Font = (gcnew System::Drawing::Font(
-                L"Gadugi", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->label4->ForeColor = System::Drawing::Color::White;
-            this->label4->Location = System::Drawing::Point(15, 17);
-            this->label4->Name = L"label4";
-            this->label4->Size = System::Drawing::Size(251, 32);
-            this->label4->TabIndex = 6;
-            this->label4->Text = L"Installed Packages";
             //
             // ListOfLibs
             //
@@ -78,19 +71,28 @@ namespace UsersControls {
             this->ListOfLibs->Size = System::Drawing::Size(276, 458);
             this->ListOfLibs->TabIndex = 7;
             //
+            // pictureBox1
+            //
+            this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image ^>(resources->GetObject(L"pictureBox1.Image")));
+            this->pictureBox1->Location = System::Drawing::Point(8, 51);
+            this->pictureBox1->Name = L"pictureBox1";
+            this->pictureBox1->Size = System::Drawing::Size(285, 36);
+            this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+            this->pictureBox1->TabIndex = 8;
+            this->pictureBox1->TabStop = false;
+            //
             // PackagesUserControl
             //
             this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
             this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-            this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(89)),
-                static_cast<System::Int32>(static_cast<System::Byte>(89)), static_cast<System::Int32>(static_cast<System::Byte>(89)));
+            this->BackColor = System::Drawing::Color::White;
+            this->Controls->Add(this->pictureBox1);
             this->Controls->Add(this->ListOfLibs);
-            this->Controls->Add(this->label4);
             this->Name = L"PackagesUserControl";
             this->Size = System::Drawing::Size(300, 584);
             this->Load += gcnew System::EventHandler(this, &PackagesUserControl::PackagesUserControl_Load);
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox1))->EndInit();
             this->ResumeLayout(false);
-            this->PerformLayout();
         }
 #pragma endregion
     private:

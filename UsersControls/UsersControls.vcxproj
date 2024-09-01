@@ -139,6 +139,9 @@
     <ClInclude Include="MainUserControl.h">
       <FileType>CppControl</FileType>
     </ClInclude>
+    <ClInclude Include="NotificationUserControl.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="PackagesUserControl.h">
       <FileType>CppControl</FileType>
     </ClInclude>
@@ -152,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainUserControl.cpp" />
+    <ClCompile Include="NotificationUserControl.cpp" />
     <ClCompile Include="PackagesUserControl.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="SettingsUserControl.cpp" />
@@ -164,15 +168,25 @@
     <Image Include="app.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainUserControl.resx">
       <DependentUpon>MainUserControl.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationUserControl.resx">
+      <DependentUpon>NotificationUserControl.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PackagesUserControl.resx">
       <DependentUpon>PackagesUserControl.h</DependentUpon>

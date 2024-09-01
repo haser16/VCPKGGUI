@@ -29,6 +29,7 @@ System::Void UsersControls::SettingsUserControl::SettingsUserControl_Load(System
         }
         File->Close();
     }
+    RadioEn->Checked = true;
 }
 
 System::Void UsersControls::SettingsUserControl::ButtonShowExplorer_Click(System::Object ^ sender, System::EventArgs ^ e)
@@ -46,5 +47,5 @@ System::Void UsersControls::SettingsUserControl::ConfirmButton_Click(System::Obj
     String ^ Path = gcnew String(j.dump().c_str());
     writer->WriteLine(Path);
     writer->Close();
-    Controls->Owner->Visible = false;
+    this->Visible = false;
 }

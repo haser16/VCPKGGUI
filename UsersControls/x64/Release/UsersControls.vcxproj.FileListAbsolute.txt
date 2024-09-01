@@ -4,3 +4,4 @@ E:\Cpp\VCPKGGUI\UsersControls\x64\Release\UsersControls.PackagesUserControl.reso
 E:\Cpp\VCPKGGUI\UsersControls\x64\Release\UsersControls.StartUserControl.resources
 E:\Cpp\VCPKGGUI\UsersControls\x64\Release\UsersControls.vcxproj.GenerateResource.cache
 E:\Cpp\VCPKGGUI\UsersControls\x64\Release\UsersControls.SettingsUserControl.resources
+E:\Cpp\VCPKGGUI\UsersControls\x64\Release\UsersControls.NotificationUserControl.resources

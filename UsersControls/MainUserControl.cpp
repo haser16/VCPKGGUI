@@ -30,7 +30,7 @@ System::Void UsersControls::MainUserControl::pictureBox5_Click(System::Object ^ 
     Proces->Start("https://vcpkg.io/en/packages");
 }
 
-System::Void UsersControls::MainUserControl::DownloadButton_Click(System::Object ^ sender, System::EventArgs ^ e) 
+System::Void UsersControls::MainUserControl::DownloadButton_Click(System::Object ^ sender, System::EventArgs ^ e)
 {
     DownloadButton->Visible = false;
     pictureBox2->Visible = true;
@@ -45,11 +45,12 @@ System::Void UsersControls::MainUserControl::DownloadButton_Click(System::Object
     }
     File->Close();
 
-    // std::string Command = "pushd " + VCPKG + " & " + ".\\vcpkg install " + msclr::interop::marshal_as<std::string>(TextBoxPackage->Text);
-    // msclr::interop::marshal_as<std::string>(TextBoxPackage->Text);
-    // int Exit = system(Command.c_str());
-    // if (Exit > 0)
-    /*{
+    std::string Command = "pushd " + VCPKG + " & " + ".\\vcpkg install " + msclr::interop::marshal_as<std::string>(TextBoxPackage->Text);
+    msclr::interop::marshal_as<std::string>(TextBoxPackage->Text);
+    int Exit = system(Command.c_str());
+
+    if (Exit > 0)
+    {
         MessageBox::Show("Something wents wrong!");
     }
     else if (!Exit)
@@ -57,5 +58,5 @@ System::Void UsersControls::MainUserControl::DownloadButton_Click(System::Object
         StreamWriter ^ writer = gcnew StreamWriter("Settings/Libs.txt", true);
         writer->WriteLine(TextBoxPackage->Text);
         writer->Close();
-    }*/
+    }
 }

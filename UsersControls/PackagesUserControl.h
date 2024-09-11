@@ -37,6 +37,21 @@ namespace UsersControls {
     private:
         System::Windows::Forms::PictureBox ^ pictureBox1;
 
+    private:
+
+
+    private:
+
+
+    private:
+
+
+    private:
+
+
+    private:
+
+
     protected: 
 
 	private:

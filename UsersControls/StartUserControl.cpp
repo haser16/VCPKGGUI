@@ -74,6 +74,7 @@ System::Void UsersControls::StartUserControl::ThrInstallVcpkg(Object ^ data)
 
         nlohmann::json j;
         j["path"] = GetProjectDirectory() + "\\vcpkg\\";
+        j["language"] = "en-EN";
         StreamWriter ^ writer = gcnew StreamWriter("Settings/pathtovcpkg.json");
         String ^ Path = gcnew String(j.dump().c_str());
         writer->WriteLine(Path);

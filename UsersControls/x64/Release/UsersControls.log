@@ -1,5 +1,11 @@
-﻿  SettingsUserControl.cpp
+﻿  MainUserControl.cpp
+  NotificationUserControl.cpp
+  PackagesUserControl.cpp
+  pch.cpp
+  SettingsUserControl.cpp
+  StartUserControl.cpp
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generating Code...
+E:\Cpp\VCPKGGUI\UsersControls\StartUserControl.cpp(29): warning C4715: 'GetProjectDirectory': not all control paths return a value
   MainUserControl.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   UsersControls.vcxproj -> E:\Cpp\VCPKGGUI\x64\Release\UsersControls.dll
-  "pwsh.exe" не является внутренней или внешней
-  командой, исполняемой программой или пакетным файлом.

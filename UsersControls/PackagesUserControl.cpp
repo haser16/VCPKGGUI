@@ -29,12 +29,28 @@ System::Void UsersControls::PackagesUserControl::PackagesUserControl_Load(System
         }
 
         System::Windows::Forms::Label ^ Label = gcnew System::Windows::Forms::Label();
-        Label->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 12, System::Drawing::FontStyle::Bold,
-            System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+        Label->Font = (gcnew System::Drawing::Font(L"Berlin Sans FB Demi", 18.25F));
+        Label->ForeColor = System::Drawing::Color::OrangeRed;
         Label->Text = Line;
-        Label->Size = System::Drawing::Size(250, 24);
+        Label->Size = System::Drawing::Size(230, 30);
         Label->Location = System::Drawing::Point(3, yOffset);
         ListOfLibs->Controls->Add(Label);
+
+        System::Windows::Forms::Button ^ Button = gcnew System::Windows::Forms::Button();
+        Button->FlatAppearance->BorderColor = System::Drawing::Color::IndianRed;
+        Button->FlatAppearance->MouseDownBackColor =
+            System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)),
+                static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)));
+        Button->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Silver;
+        Button->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+        Button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.25F));
+        Button->Image = Image::FromFile("../Images/btn-more.png");
+        Button->Location = System::Drawing::Point(3, yOffset);
+        Button->Name = L"button1";
+        Button->Size = System::Drawing::Size(20, 23);
+        Button->TabIndex = 0;
+        Button->UseVisualStyleBackColor = true;
+        ListOfLibs->Controls->Add(Button);
 
         yOffset += 30;
     }

@@ -19,46 +19,32 @@ protected:
     }
 
 public:
-    System::Windows::Forms::Button ^ SettingsButton;
-
-protected:
-public:
-
-
-private:
-
-
-public:
-private:
-
-
-private:
-
-
-public:
-
-
-public:
     UsersControls::MainUserControl ^ mainUserControl1;
 
+    System::ComponentModel::IContainer ^ components;
+
+private:
+
+
 public:
+private:
+
+
+private:
     UsersControls::SettingsUserControl ^ settingsUserControl1;
 
+public:
+    System::Windows::Forms::Button ^ SettingsButton;
+
+private:
+    UsersControls::NotificationUserControl ^ notificationUserControl1;
+
+public:
+private:
+private:
+public:
 private:
     UsersControls::PackagesUserControl ^ packagesUserControl1;
-
-public:
-private:
-private:
-
-
-public:
-private:
-
-
-private:
-public:
-    System::ComponentModel::IContainer ^ components;
 
 #pragma region Windows Form Designer generated code
 
@@ -66,25 +52,12 @@ public:
     {
         System::ComponentModel::ComponentResourceManager ^ resources =
             (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
-        this->SettingsButton = (gcnew System::Windows::Forms::Button());
         this->mainUserControl1 = (gcnew UsersControls::MainUserControl());
-        this->settingsUserControl1 = (gcnew UsersControls::SettingsUserControl());
         this->packagesUserControl1 = (gcnew UsersControls::PackagesUserControl());
+        this->settingsUserControl1 = (gcnew UsersControls::SettingsUserControl());
+        this->SettingsButton = (gcnew System::Windows::Forms::Button());
+        this->notificationUserControl1 = (gcnew UsersControls::NotificationUserControl());
         this->SuspendLayout();
-        //
-        // SettingsButton
-        //
-        this->SettingsButton->BackColor = System::Drawing::Color::White;
-        this->SettingsButton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-        this->SettingsButton->FlatAppearance->BorderColor = System::Drawing::Color::White;
-        this->SettingsButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-        this->SettingsButton->Image = (cli::safe_cast<System::Drawing::Image ^>(resources->GetObject(L"SettingsButton.Image")));
-        this->SettingsButton->Location = System::Drawing::Point(637, 31);
-        this->SettingsButton->Name = L"SettingsButton";
-        this->SettingsButton->Size = System::Drawing::Size(38, 37);
-        this->SettingsButton->TabIndex = 4;
-        this->SettingsButton->UseVisualStyleBackColor = false;
-        this->SettingsButton->Click += gcnew System::EventHandler(this, &MainForm::SettingsButton_Click);
         //
         // mainUserControl1
         //
@@ -93,23 +66,44 @@ public:
         this->mainUserControl1->Size = System::Drawing::Size(704, 584);
         this->mainUserControl1->TabIndex = 2;
         //
+        // packagesUserControl1
+        //
+        this->packagesUserControl1->BackColor = System::Drawing::Color::White;
+        this->packagesUserControl1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+        this->packagesUserControl1->Location = System::Drawing::Point(690, -15);
+        this->packagesUserControl1->Name = L"packagesUserControl1";
+        this->packagesUserControl1->Size = System::Drawing::Size(307, 584);
+        this->packagesUserControl1->TabIndex = 5;
+        //
         // settingsUserControl1
         //
         this->settingsUserControl1->BackColor = System::Drawing::Color::White;
         this->settingsUserControl1->Location = System::Drawing::Point(-2, -15);
         this->settingsUserControl1->Name = L"settingsUserControl1";
         this->settingsUserControl1->Size = System::Drawing::Size(700, 584);
-        this->settingsUserControl1->TabIndex = 3;
-        this->settingsUserControl1->Visible = false;
+        this->settingsUserControl1->TabIndex = 22;
         //
-        // packagesUserControl1
+        // SettingsButton
         //
-        this->packagesUserControl1->BackColor = System::Drawing::Color::White;
-        this->packagesUserControl1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-        this->packagesUserControl1->Location = System::Drawing::Point(681, -15);
-        this->packagesUserControl1->Name = L"packagesUserControl1";
-        this->packagesUserControl1->Size = System::Drawing::Size(307, 584);
-        this->packagesUserControl1->TabIndex = 5;
+        this->SettingsButton->BackColor = System::Drawing::Color::White;
+        this->SettingsButton->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+        this->SettingsButton->FlatAppearance->BorderColor = System::Drawing::Color::White;
+        this->SettingsButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+        this->SettingsButton->Image = (cli::safe_cast<System::Drawing::Image ^>(resources->GetObject(L"SettingsButton.Image")));
+        this->SettingsButton->Location = System::Drawing::Point(632, 12);
+        this->SettingsButton->Name = L"SettingsButton";
+        this->SettingsButton->Size = System::Drawing::Size(38, 37);
+        this->SettingsButton->TabIndex = 23;
+        this->SettingsButton->UseVisualStyleBackColor = false;
+        this->SettingsButton->Click += gcnew System::EventHandler(this, &MainForm::SettingsButton_Click);
+        //
+        // notificationUserControl1
+        //
+        this->notificationUserControl1->BackColor = System::Drawing::SystemColors::Control;
+        this->notificationUserControl1->Location = System::Drawing::Point(-2, -15);
+        this->notificationUserControl1->Name = L"notificationUserControl1";
+        this->notificationUserControl1->Size = System::Drawing::Size(704, 584);
+        this->notificationUserControl1->TabIndex = 24;
         //
         // MainForm
         //
@@ -117,9 +111,10 @@ public:
         this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
         this->BackColor = System::Drawing::Color::White;
         this->ClientSize = System::Drawing::Size(984, 561);
-        this->Controls->Add(this->packagesUserControl1);
+        this->Controls->Add(this->notificationUserControl1);
         this->Controls->Add(this->SettingsButton);
         this->Controls->Add(this->settingsUserControl1);
+        this->Controls->Add(this->packagesUserControl1);
         this->Controls->Add(this->mainUserControl1);
         this->ForeColor = System::Drawing::Color::White;
         this->Icon = (cli::safe_cast<System::Drawing::Icon ^>(resources->GetObject(L"$this.Icon")));
@@ -128,14 +123,18 @@ public:
         this->Name = L"MainForm";
         this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
         this->Text = L"VCPKG GUI";
+        this->Load += gcnew System::EventHandler(this, &MainForm::MainForm_Load);
         this->ResumeLayout(false);
     }
 #pragma endregion
-    /*private: System::Void Install_Click(System::Object^ sender, System::EventArgs^ e);
-    private: System::Void ChoosePathButton_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {};
-    private: System::Void ChoosePathButton_DoubleClick(System::Object^ sender, System::EventArgs^ e);*/
 
 public:
     System::Void SettingsButton_Click(System::Object ^ sender, System::EventArgs ^ e);
+    System::Void AddNotify();
+
+private:
+    System::Void MainForm_Load(System::Object ^ sender, System::EventArgs ^ e) { settingsUserControl1->Visible = false;
+        notificationUserControl1->Visible = false;
+    }
 };
-}  // namespace CppCLRWinFormsProject
+}  // namespace VCPKGGUI

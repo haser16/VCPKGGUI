@@ -135,7 +135,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="JsonSettings.h" />
     <ClInclude Include="MainUserControl.h">
       <FileType>CppControl</FileType>
     </ClInclude>

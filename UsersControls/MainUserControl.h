@@ -33,163 +33,33 @@ protected:
 private:
     System::Windows::Forms::Splitter ^ splitter1;
 
-protected:
-private:
-
-
 private:
     System::Windows::Forms::PictureBox ^ pictureBox1;
-
-private:
-
 
 private:
     System::Windows::Forms::PictureBox ^ pictureBox5;
 
 private:
-
-
-private:
     System::Windows::Forms::Panel ^ panel1;
-
-private:
-
-
-private:
-
-
-private:
-    System::Windows::Forms::PictureBox ^ pictureBox2;
-
-private:
-
-
-private:
-
 
 private:
     System::Windows::Forms::PictureBox ^ pictureBox3;
 
 private:
-    System::Windows::Forms::Button ^ DownloadButton;
-
-public:
-
-
-private:
-private:
-
-
-private:
-
-
-private:
     System::Windows::Forms::PictureBox ^ pictureBox6;
 
-private:
-    System::Windows::Forms::TextBox ^ textBox1;
+public:
+    System::Windows::Forms::TextBox ^ TextBoxPackage;
 
 private:
     System::Windows::Forms::PictureBox ^ pictureBox4;
 
 private:
-
-
-private:
-
+    System::Windows::Forms::Button ^ DownloadButton;
 
 private:
+    System::Windows::Forms::PictureBox ^ pictureBox2;
 
-
-private:
-
-
-private:
-
-
-protected:
-private:
-
-
-private:
-private:
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-
-
-private:
-protected:
-private:
-private:
-private:
-private:
-private:
-private:
-private:
-private:
-private:
 private:
     /// <summary>
     /// Required designer variable.
@@ -209,19 +79,19 @@ private:
         this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
         this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
         this->panel1 = (gcnew System::Windows::Forms::Panel());
-        this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+        this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
+        this->TextBoxPackage = (gcnew System::Windows::Forms::TextBox());
         this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
         this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
         this->DownloadButton = (gcnew System::Windows::Forms::Button());
         this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
-        this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
         (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox1))->BeginInit();
         (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox5))->BeginInit();
         this->panel1->SuspendLayout();
+        (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox4))->BeginInit();
         (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox6))->BeginInit();
         (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox3))->BeginInit();
         (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox2))->BeginInit();
-        (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox4))->BeginInit();
         this->SuspendLayout();
         //
         // splitter1
@@ -259,12 +129,12 @@ private:
         this->panel1->BackColor = System::Drawing::Color::White;
         this->panel1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
         this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+        this->panel1->Controls->Add(this->DownloadButton);
         this->panel1->Controls->Add(this->pictureBox4);
-        this->panel1->Controls->Add(this->textBox1);
+        this->panel1->Controls->Add(this->pictureBox2);
+        this->panel1->Controls->Add(this->TextBoxPackage);
         this->panel1->Controls->Add(this->pictureBox6);
         this->panel1->Controls->Add(this->pictureBox3);
-        this->panel1->Controls->Add(this->DownloadButton);
-        this->panel1->Controls->Add(this->pictureBox2);
         this->panel1->Controls->Add(this->pictureBox5);
         this->panel1->Controls->Add(this->pictureBox1);
         this->panel1->Controls->Add(this->splitter1);
@@ -273,16 +143,25 @@ private:
         this->panel1->Size = System::Drawing::Size(704, 584);
         this->panel1->TabIndex = 1;
         //
-        // textBox1
+        // pictureBox4
         //
-        this->textBox1->BackColor = System::Drawing::Color::White;
-        this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-        this->textBox1->Font = (gcnew System::Drawing::Font(L"Berlin Sans FB Demi", 18.25F));
-        this->textBox1->ForeColor = System::Drawing::Color::OrangeRed;
-        this->textBox1->Location = System::Drawing::Point(63, 237);
-        this->textBox1->Name = L"textBox1";
-        this->textBox1->Size = System::Drawing::Size(399, 28);
-        this->textBox1->TabIndex = 25;
+        this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image ^>(resources->GetObject(L"pictureBox4.Image")));
+        this->pictureBox4->Location = System::Drawing::Point(54, 296);
+        this->pictureBox4->Name = L"pictureBox4";
+        this->pictureBox4->Size = System::Drawing::Size(126, 18);
+        this->pictureBox4->TabIndex = 26;
+        this->pictureBox4->TabStop = false;
+        //
+        // TextBoxPackage
+        //
+        this->TextBoxPackage->BackColor = System::Drawing::Color::White;
+        this->TextBoxPackage->BorderStyle = System::Windows::Forms::BorderStyle::None;
+        this->TextBoxPackage->Font = (gcnew System::Drawing::Font(L"Berlin Sans FB Demi", 18.25F));
+        this->TextBoxPackage->ForeColor = System::Drawing::Color::OrangeRed;
+        this->TextBoxPackage->Location = System::Drawing::Point(63, 237);
+        this->TextBoxPackage->Name = L"TextBoxPackage";
+        this->TextBoxPackage->Size = System::Drawing::Size(399, 28);
+        this->TextBoxPackage->TabIndex = 25;
         //
         // pictureBox6
         //
@@ -311,10 +190,10 @@ private:
         this->DownloadButton->Font = (gcnew System::Drawing::Font(L"Berlin Sans FB Demi", 20.25F));
         this->DownloadButton->ForeColor = System::Drawing::Color::White;
         this->DownloadButton->Image = (cli::safe_cast<System::Drawing::Image ^>(resources->GetObject(L"DownloadButton.Image")));
-        this->DownloadButton->Location = System::Drawing::Point(24, 500);
+        this->DownloadButton->Location = System::Drawing::Point(24, 476);
         this->DownloadButton->Name = L"DownloadButton";
         this->DownloadButton->Size = System::Drawing::Size(290, 63);
-        this->DownloadButton->TabIndex = 19;
+        this->DownloadButton->TabIndex = 23;
         this->DownloadButton->Text = L"Download";
         this->DownloadButton->UseVisualStyleBackColor = true;
         this->DownloadButton->Click += gcnew System::EventHandler(this, &MainUserControl::DownloadButton_Click);
@@ -322,22 +201,14 @@ private:
         // pictureBox2
         //
         this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image ^>(resources->GetObject(L"pictureBox2.Image")));
-        this->pictureBox2->Location = System::Drawing::Point(-78, 344);
+        this->pictureBox2->Location = System::Drawing::Point(-78, 320);
         this->pictureBox2->Name = L"pictureBox2";
         this->pictureBox2->Size = System::Drawing::Size(480, 360);
         this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
-        this->pictureBox2->TabIndex = 18;
+        this->pictureBox2->TabIndex = 22;
         this->pictureBox2->TabStop = false;
         this->pictureBox2->Visible = false;
-        //
-        // pictureBox4
-        //
-        this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image ^>(resources->GetObject(L"pictureBox4.Image")));
-        this->pictureBox4->Location = System::Drawing::Point(54, 296);
-        this->pictureBox4->Name = L"pictureBox4";
-        this->pictureBox4->Size = System::Drawing::Size(126, 18);
-        this->pictureBox4->TabIndex = 26;
-        this->pictureBox4->TabStop = false;
+        this->pictureBox2->Click += gcnew System::EventHandler(this, &MainUserControl::pictureBox2_Click);
         //
         // MainUserControl
         //
@@ -350,16 +221,21 @@ private:
         (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox5))->EndInit();
         this->panel1->ResumeLayout(false);
         this->panel1->PerformLayout();
+        (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox4))->EndInit();
         (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox6))->EndInit();
         (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox3))->EndInit();
         (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox2))->EndInit();
-        (cli::safe_cast<System::ComponentModel::ISupportInitialize ^>(this->pictureBox4))->EndInit();
         this->ResumeLayout(false);
     }
 #pragma endregion
 
 private:
     System::Void pictureBox5_Click(System::Object ^ sender, System::EventArgs ^ e);
+
+private:
     System::Void DownloadButton_Click(System::Object ^ sender, System::EventArgs ^ e);
+
+private:
+    System::Void pictureBox2_Click(System::Object ^ sender, System::EventArgs ^ e) {}
 };
 }  // namespace UsersControls
